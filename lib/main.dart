@@ -32,6 +32,23 @@ class HomePage extends StatelessWidget {
           Center(child: Text("Welcome Back",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)),
           SizedBox(height: 5,),
           Center(child: Text("please enter your email address",style: TextStyle(),)),
+          SizedBox(height: 5,),
+          TextField(decoration: InputDecoration(border: OutlineInputBorder(),
+            hintText: "email address"
+          ),),
+          SizedBox(height: 10,),
+          SizedBox(
+            height: 50,
+            width: double.infinity,
+            child: ElevatedButton(onPressed: (){}, child: Text("Next",style: TextStyle(
+              fontSize: 20
+            ),),style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF0097A7),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder()
+            ),),
+          )
+
         ],
       ),),
 
