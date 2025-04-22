@@ -33,6 +33,27 @@ class HomeScreen extends StatelessWidget {
           SizedBox(width: 10,),
         ],
       ),
+      body: Padding(padding: EdgeInsets.all(10),child: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+            border: OutlineInputBorder(
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide.none,
+            ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide.none
+              ),
+              fillColor: Colors.grey.withOpacity(.2),
+              filled: true,
+              hintText: "search",
+              prefixIcon: Icon(Icons.search)
+          ),
+
+          )
+        ],
+      ),),
 
     );
   }
