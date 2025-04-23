@@ -50,8 +50,14 @@ class HomeScreen extends StatelessWidget {
               hintText: "search",
               prefixIcon: Icon(Icons.search)
           ),
+          ),
+          SizedBox(height: 10,),
 
-          )
+          Stack(children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset("assets/homeScreen/container.png",fit: BoxFit.cover,height: 150,width: double.infinity,)),
+          ],)
         ],
       ),),
 
