@@ -57,6 +57,33 @@ class HomeScreen extends StatelessWidget {
           ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset("assets/homeScreen/container.png",fit: BoxFit.cover,height: 150,width: double.infinity,)),
+           Positioned.fill(child:  Container(
+             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
+               children: [
+                 Image.asset("assets/homeScreen/shoes.png",height: 160,width: 160,),
+                 Column(children: [
+                   Text("Happy new year\nSpecial Deal\nSave 30%",style: TextStyle(color: Colors.white,fontSize: 20),),
+                   SizedBox(height: 10,),
+                   Stack(
+                     alignment: Alignment.center,
+                    children: [
+                       ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "assets/homeScreen/button.png",
+                          height: 40,
+                          width: 150,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text("shop now",style: TextStyle(color: Colors.grey),)
+                    ],
+                   )
+
+                 ],)
+               ],),
+           ))
           ],)
         ],
       ),),
