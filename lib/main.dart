@@ -117,6 +117,13 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.white,
                 border: Border.all(color: Colors.grey,width: 1)
               ),),
+          ],),
+          SizedBox(height: 10,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Text("All Categories",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+            Text("See All",style: TextStyle(color: Colors.grey.withOpacity(0.6),fontSize: 20),)
           ],)
         ],
       ),),
