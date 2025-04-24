@@ -84,6 +84,39 @@ class HomeScreen extends StatelessWidget {
                  ],)
                ],),
            ))
+          ],),
+          SizedBox(height: 10,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Container(height: 15,width: 15,decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.grey
+            ),),
+              SizedBox(width: 5,),
+              Container(height: 15,width: 15,decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey,width: 1)
+              ),),
+              SizedBox(width: 5,),
+              Container(height: 15,width: 15,decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey,width: 1)
+              ),),
+              SizedBox(width: 5,),
+              Container(height: 15,width: 15,decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey,width: 1)
+              ),),
+              SizedBox(width: 5,),
+              Container(height: 15,width: 15,decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white,
+                border: Border.all(color: Colors.grey,width: 1)
+              ),),
           ],)
         ],
       ),),
