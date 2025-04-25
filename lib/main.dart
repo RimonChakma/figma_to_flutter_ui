@@ -21,6 +21,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    List<String> imageFile = [
+      "assets/homeScreen/laptop.png",
+      "assets/homeScreen/fruits.png",
+      "assets/homeScreen/diamond.png",
+      "assets/homeScreen/car.png",
+    ];
+
+
     return Scaffold(
       appBar: AppBar(
         title: Image.asset("assets/homeScreen/craftybay.png",height: 150,width: 150,),
