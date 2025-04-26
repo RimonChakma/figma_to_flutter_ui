@@ -22,12 +22,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    List<String> imageFile = [
-      "assets/homeScreen/laptop.png",
-      "assets/homeScreen/fruits.png",
-      "assets/homeScreen/diamond.png",
-      "assets/homeScreen/car.png",
+    List<Map<String, String>> imageFile = [
+      {"path": "assets/homeScreen/laptop.png", "name": "Laptop"},
+      {"path": "assets/homeScreen/fruits.png", "name": "Fruits"},
+      {"path": "assets/homeScreen/diamond.png", "name": "Diamond"},
+      {"path": "assets/homeScreen/car.png", "name": "Car"},
     ];
+
 
 
     return Scaffold(
@@ -141,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "See All",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.6), fontSize: 20),
+                    style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 20),
                   ),
                 ],
               ),
@@ -149,24 +150,32 @@ class HomeScreen extends StatelessWidget {
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: imageFile.map((path) {
-                  return Container(
-                    height: 80,
-                    width: 80,
-                    margin: EdgeInsets.symmetric(horizontal: 4),
-                    decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        path,
-                        height: 50,
-                        width: 50,
+                children: imageFile.map((file) {
+                  return Column(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 80,
+                        margin: EdgeInsets.symmetric(horizontal: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child:
+                            Center(
+                              child: Image.asset(
+                                file['path']!,
+                                height: 50,
+                                width: 50,
+                              ),
+                            ),
                       ),
-                    ),
+                      Text(file["name"]!,style: TextStyle(color: Colors.grey.withOpacity(0.9),fontWeight: FontWeight.w700))
+                    ],
                   );
+
                 }).toList(),
+
               ),
 
             ],
