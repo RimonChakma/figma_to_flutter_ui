@@ -43,158 +43,186 @@ class HomeScreen extends StatelessWidget {
           SizedBox(width: 10,),
         ],
       ),
-      body: Padding(padding: EdgeInsets.all(10),child: Column(
-        children: [
-          TextField(
-            decoration: InputDecoration(
-            border: OutlineInputBorder(
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
-            ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide.none
+      body: Padding(padding: EdgeInsets.all(10),child: SingleChildScrollView(
+        child: Column(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+              border: OutlineInputBorder(
               ),
-              fillColor: Colors.grey.withOpacity(.2),
-              filled: true,
-              hintText: "search",
-              prefixIcon: Icon(Icons.search)
-          ),
-          ),
-          SizedBox(height: 10,),
-
-          Stack(children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset("assets/homeScreen/container.png",fit: BoxFit.cover,height: 150,width: double.infinity,)),
-           Positioned.fill(child:  Container(
-             child: Row(
-               mainAxisAlignment: MainAxisAlignment.spaceAround,
-               children: [
-                 Image.asset("assets/homeScreen/shoes.png",height: 160,width: 160,),
-                 Column(children: [
-                   Text("Happy new year\nSpecial Deal\nSave 30%",style: TextStyle(color: Colors.white,fontSize: 20),),
-                   SizedBox(height: 10,),
-                   Stack(
-                     alignment: Alignment.center,
-                    children: [
-                       ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/homeScreen/button.png",
-                          height: 40,
-                          width: 150,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Text("shop now",style: TextStyle(color: Colors.grey),)
-                    ],
-                   )
-
-                 ],)
-               ],),
-           ))
-          ],),
-          SizedBox(height: 10,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-            Container(height: 15,width: 15,decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey
-            ),),
-              SizedBox(width: 5,),
-              Container(height: 15,width: 15,decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey,width: 1)
-              ),),
-              SizedBox(width: 5,),
-              Container(height: 15,width: 15,decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey,width: 1)
-              ),),
-              SizedBox(width: 5,),
-              Container(height: 15,width: 15,decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey,width: 1)
-              ),),
-              SizedBox(width: 5,),
-              Container(height: 15,width: 15,decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                border: Border.all(color: Colors.grey,width: 1)
-              ),),
-          ]),
-          SizedBox(height: 10,),
-          SizedBox(height: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "All Categories",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    "See All",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
-                  ),
-                ],
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
               ),
-              SizedBox(height: 10),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide.none
+                ),
+                fillColor: Colors.grey.withOpacity(.2),
+                filled: true,
+                hintText: "search",
+                prefixIcon: Icon(Icons.search)
+            ),
+            ),
+            SizedBox(height: 10,),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: imageFile.map((file) {
-                  return Column(
-                    children: [
-                      Container(
-                        height: 80,
-                        width: 80,
-                        margin: EdgeInsets.symmetric(horizontal: 4),
-                        decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.2),
+            Stack(children: [
+            ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset("assets/homeScreen/container.png",fit: BoxFit.cover,height: 150,width: double.infinity,)),
+             Positioned.fill(child:  Container(
+               child: Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                   Image.asset("assets/homeScreen/shoes.png",height: 160,width: 160,),
+                   Column(children: [
+                     Text("Happy new year\nSpecial Deal\nSave 30%",style: TextStyle(color: Colors.white,fontSize: 20),),
+                     SizedBox(height: 10,),
+                     Stack(
+                       alignment: Alignment.center,
+                      children: [
+                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            "assets/homeScreen/button.png",
+                            height: 40,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        child:
-                            Center(
-                              child: Image.asset(
-                                file['path']!,
-                                height: 50,
-                                width: 50,
+                        Text("shop now",style: TextStyle(color: Colors.grey),)
+                      ],
+                     )
+
+                   ],)
+                 ],),
+             ))
+            ],),
+            SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Container(height: 15,width: 15,decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey
+              ),),
+                SizedBox(width: 5,),
+                Container(height: 15,width: 15,decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey,width: 1)
+                ),),
+                SizedBox(width: 5,),
+                Container(height: 15,width: 15,decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey,width: 1)
+                ),),
+                SizedBox(width: 5,),
+                Container(height: 15,width: 15,decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey,width: 1)
+                ),),
+                SizedBox(width: 5,),
+                Container(height: 15,width: 15,decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  border: Border.all(color: Colors.grey,width: 1)
+                ),),
+            ]),
+            SizedBox(height: 10,),
+            SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "All Categories",
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      "See All",
+                      style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: imageFile.map((file) {
+                    return Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          margin: EdgeInsets.symmetric(horizontal: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child:
+                              Center(
+                                child: Image.asset(
+                                  file['path']!,
+                                  height: 50,
+                                  width: 50,
+                                ),
                               ),
-                            ),
-                      ),
-                      Text(file["name"]!,style: TextStyle(color: Colors.grey.withOpacity(0.9),fontWeight: FontWeight.w700))
-                    ],
-                  );
+                        ),
+                        Text(file["name"]!,style: TextStyle(color: Colors.grey.withOpacity(0.9),fontWeight: FontWeight.w700))
+                      ],
+                    );
 
-                }).toList(),
+                  }).toList(),
 
+                ),
+
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text(
+                "Popular",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
+              Text(
+                "See All",
+                style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
+              ),
+            ],),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(3, (index) {
+                  return Container(
+                    height: 130,  // Set the container height to 200
+                    width: 130,   // Set the container width to 200
+                    margin: EdgeInsets.only(right: 10), // Add space between cards
+                    child: Card(
+                      margin: EdgeInsets.zero,  // Remove margin inside the card
+                      child: Center(
+                        child: Image.asset(
+                          "assets/homeScreen/shoes.png",
+                          fit: BoxFit.contain, // Ensure image fits within the space
+                          height: 100,  // Set image height to 100
+                          width: 100,   // Set image width to 100
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+              ),
+            )
 
-            ],
-          ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-            Text(
-              "Popular",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-            Text(
-              "See All",
-              style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
-            ),
-          ],)
 
-        ],
+          ],
+
+        ),
       ),),
 
     );
