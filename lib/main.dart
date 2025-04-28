@@ -142,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "See All",
-                    style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 20),
+                    style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
                   ),
                 ],
               ),
@@ -180,6 +180,19 @@ class HomeScreen extends StatelessWidget {
 
             ],
           ),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Text(
+              "Popular",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            Text(
+              "See All",
+              style: TextStyle(color: Colors.grey.withOpacity(0.8), fontSize: 18),
+            ),
+          ],)
 
         ],
       ),),
