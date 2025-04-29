@@ -224,7 +224,17 @@ class HomeScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 Text("new year special shoe 30"),
-
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("\$100",),
+                                    Row(children: [
+                                      Icon(Icons.star),
+                                      Text("4.8")
+                                    ],),
+                                    Icon(Icons.favorite)
+                                  ],
+                                )
                               ],
                             ),
                           )
