@@ -198,26 +198,45 @@ class HomeScreen extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
+
                 children: List.generate(3, (index) {
                   return Container(
-                    height: 130,  // Set the container height to 200
-                    width: 130,   // Set the container width to 200
-                    margin: EdgeInsets.only(right: 10), // Add space between cards
+                    width: 170,
+                    margin: EdgeInsets.only(right: 10),
                     child: Card(
-                      margin: EdgeInsets.zero,  // Remove margin inside the card
-                      child: Center(
-                        child: Image.asset(
-                          "assets/homeScreen/shoes.png",
-                          fit: BoxFit.contain, // Ensure image fits within the space
-                          height: 100,  // Set image height to 100
-                          width: 100,   // Set image width to 100
-                        ),
+                      color: Colors.grey,
+                      margin: EdgeInsets.zero, 
+                      child: Column(
+                        children: [
+                          Center(
+                            child: Image.asset(
+                              "assets/homeScreen/shoes.png",
+                              fit: BoxFit.contain, 
+                              height: 100, 
+                              width: 100,  
+                            ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.white
+                            ),
+                            child: Column(
+                              children: [
+                                Text("new year special shoe 30"),
+
+                              ],
+                            ),
+                          )
+
+                        ],
                       ),
                     ),
                   );
                 }),
               ),
-            )
+            ),
+
 
 
           ],
