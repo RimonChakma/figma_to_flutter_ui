@@ -253,6 +253,12 @@ class HomeScreen extends StatelessWidget {
 
         ),
       ),),
+      bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
+        BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "cart"),
+        BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish"),
+      ]),
 
     );
   }
