@@ -49,7 +49,26 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
       appBar: AppBar(
         title: Text("categories"),
       ),
+      body: GridView.builder(
+        itemCount: imageFile.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
 
+      ), itemBuilder: (context, index) {
+          return Center(
+            child: SizedBox(
+              height: 90,
+              width: 90,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.2),
+                ),
+              ),
+            ),
+          );
+      },),
     );
   }
 }
