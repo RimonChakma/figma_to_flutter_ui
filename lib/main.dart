@@ -57,24 +57,32 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
         mainAxisSpacing: 10,
 
       ), itemBuilder: (context, index) {
-          return Center(
-            child: SizedBox(
-              height: 90,
-              width: 90,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.2),
-                ),
-                child: Center(
-                  child: Image.asset(
-                    imageFile[index]["path"]!,
-                    fit: BoxFit.contain,
-                    height: 50,
-                    width: 50,
+          return Column(
+            children: [
+              Center(
+                child: SizedBox(
+                  height: 90,
+                  width: 90,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.2),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        imageFile[index]["path"]!,
+                        fit: BoxFit.contain,
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+              
                   ),
+                  
                 ),
               ),
-            ),
+              SizedBox(height: 6,),
+              Text(imageFile[index]["name"]!)
+            ],
           );
       },),
     );
