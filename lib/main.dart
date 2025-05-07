@@ -65,6 +65,14 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
                 decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.2),
                 ),
+                child: Center(
+                  child: Image.asset(
+                    imageFile[index]["path"]!,
+                    fit: BoxFit.contain,
+                    height: 50,
+                    width: 50,
+                  ),
+                ),
               ),
             ),
           );
