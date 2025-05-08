@@ -88,7 +88,11 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
             ],
           );
       },),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.grey,
+          currentIndex: 0,
+          items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
         BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "gift"),
