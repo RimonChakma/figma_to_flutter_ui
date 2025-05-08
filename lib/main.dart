@@ -43,6 +43,7 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
     {"path": "assets/homeScreen/car.png", "name": "furniture"},
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +58,8 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
         mainAxisSpacing: 10,
 
       ), itemBuilder: (context, index) {
-          return Column(
+          return
+            Column(
             children: [
               Center(
                 child: SizedBox(
@@ -75,16 +77,23 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
                         width: 50,
                       ),
                     ),
-              
                   ),
-                  
                 ),
               ),
+
+
               SizedBox(height: 6,),
               Text(imageFile[index]["name"]!)
+
             ],
           );
       },),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home)),
+        BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp)),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart)),
+        BottomNavigationBarItem(icon: Icon(Icons.card_giftcard)),
+      ]),
     );
   }
 }
