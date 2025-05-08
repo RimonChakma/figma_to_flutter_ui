@@ -91,6 +91,8 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.grey,
           unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
+
           currentIndex: 0,
           items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
