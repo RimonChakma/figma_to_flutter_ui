@@ -89,10 +89,10 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
           );
       },),
       bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home)),
-        BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp)),
-        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart)),
-        BottomNavigationBarItem(icon: Icon(Icons.card_giftcard)),
+        BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
+        BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "gift"),
+        BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish"),
       ]),
     );
   }
