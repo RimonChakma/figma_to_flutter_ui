@@ -31,6 +31,16 @@ class _cetagorieScreenState extends State<cetagorieScreen> {
       appBar: AppBar(
         title: Text("Wish List"),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.grey,
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home),label:"home",),
+            BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
+            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "cart"),
+            BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish",),
+          ]),
     );
   }
 }
