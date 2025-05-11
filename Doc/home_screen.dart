@@ -226,6 +226,7 @@ class HomeScreen extends StatelessWidget {
                                 Text("new year special shoe 30"),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Text("\$100",),
                                     Row(children: [

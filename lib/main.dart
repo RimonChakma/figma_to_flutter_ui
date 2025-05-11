@@ -24,6 +24,19 @@ class ProductDetalsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("productDetails Screen"),),
+
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.grey,
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
+
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
+            BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
+            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "gift"),
+            BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish"),
+          ]),
     );
   }
 }
