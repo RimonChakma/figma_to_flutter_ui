@@ -11,34 +11,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProductDetalsScreen(),
+      home: ThreeContainersScreen(),
     );
   }
 }
 
-
-class ProductDetalsScreen extends StatelessWidget {
-  const ProductDetalsScreen({super.key});
+class ThreeContainersScreen extends StatelessWidget {
+  const ThreeContainersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("productDetails Screen"),),
+      appBar: AppBar(title: Text("Three Different Sized Containers")),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 200,
+              width: double.infinity,
+              color: Colors.grey,
+              child: Center(child: Text("Small Container", style: TextStyle(color: Colors.white))),
+            ),
+            SizedBox(height: 20),
 
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.grey,
-          unselectedItemColor: Colors.grey,
-          type: BottomNavigationBarType.fixed,
 
-          currentIndex: 0,
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
-            BottomNavigationBarItem(icon: Icon(Icons.widgets_sharp),label: "categories"),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "gift"),
-            BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish"),
-          ]),
+          ],
+        ),
+      ),
     );
   }
 }
-
-
