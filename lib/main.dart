@@ -30,7 +30,7 @@ class ThreeContainersScreen extends StatelessWidget {
               height: 200,
               width: double.infinity,
               color: Colors.grey,
-              child: Center(child: Text("Small Container", style: TextStyle(color: Colors.white))),
+              child: Image.asset("assets/homeScreen/shoes.png"),
             ),
             SizedBox(height: 20),
 
