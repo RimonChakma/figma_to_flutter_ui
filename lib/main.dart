@@ -27,14 +27,56 @@ class ThreeContainersScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 200,
+              height: 220,
               width: double.infinity,
               color: Colors.grey,
-              child: Image.asset("assets/homeScreen/shoes.png"),
+              child: Column(
+                children: [
+                  Center(
+                    child: Image.asset("assets/homeScreen/shoes.png",fit: BoxFit.contain,height: 190,width: 190,),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Container(
+                      height: 15,
+                      width: 15,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle
+                      ),
+                    ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 15,
+                        width: 15,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                  ],)
+                ],
+              ),
             ),
-            SizedBox(height: 20),
-
-
           ],
         ),
       ),
