@@ -22,7 +22,7 @@ class ThreeContainersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Three Different Sized Containers")),
+      appBar: AppBar(title: Text("products details")),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -77,6 +77,32 @@ class ThreeContainersScreen extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(width: 10,),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                    Text("Special Deal save 30%",style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
+                    Row(children: [
+                      IconButton(onPressed: (){}, icon: Icon(Icons.remove),style: IconButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                        foregroundColor: Colors.white
+                      ),),
+                      SizedBox(width: 3,),
+                      Text("01",style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                      SizedBox(width: 3,),
+                      IconButton(onPressed: (){}, icon: Icon(Icons.add),style: IconButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                        foregroundColor: Colors.white
+                      ),),
+                    ],)
+                  ],),
+                ],
+              ),
+            )
           ],
         ),
       ),
