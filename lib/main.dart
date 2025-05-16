@@ -27,13 +27,13 @@ class ThreeContainersScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 220,
+              height: 180,
               width: double.infinity,
               color: Colors.grey,
               child: Column(
                 children: [
                   Center(
-                    child: Image.asset("assets/homeScreen/shoes.png",fit: BoxFit.contain,height: 190,width: 190,),
+                    child: Image.asset("assets/homeScreen/shoes.png",fit: BoxFit.contain,height: 150,width: 150,),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -73,7 +73,8 @@ class ThreeContainersScreen extends StatelessWidget {
                             shape: BoxShape.circle
                         ),
                       ),
-                  ],)
+                  ],),
+
                 ],
               ),
             ),
@@ -100,6 +101,12 @@ class ThreeContainersScreen extends StatelessWidget {
                       ),),
                     ],)
                   ],),
+                  Row(children: [
+                    IconButton(onPressed: (){}, icon: Icon(Icons.star,color: Colors.yellow,)),
+                    Text("4.8"),
+                    Text("reviews"),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.favorite,color: Colors.yellow,))
+                  ],)
                 ],
               ),
             )
