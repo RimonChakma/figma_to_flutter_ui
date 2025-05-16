@@ -80,8 +80,9 @@ class ThreeContainersScreen extends StatelessWidget {
             ),
             SizedBox(width: 10,),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(16),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,12 +102,56 @@ class ThreeContainersScreen extends StatelessWidget {
                       ),),
                     ],)
                   ],),
-                  Row(children: [
+                  Row(
+
+                    children: [
                     IconButton(onPressed: (){}, icon: Icon(Icons.star,color: Colors.yellow,)),
                     Text("4.8"),
                     Text("reviews"),
                     IconButton(onPressed: (){}, icon: Icon(Icons.favorite,color: Colors.yellow,))
-                  ],)
+                  ],),
+                  Text("Color"),
+                  SizedBox(height: 10,),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            shape: BoxShape.circle
+                        ),
+                        child: Icon(Icons.check,color: Colors.white,),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.brown,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                    ],)
                 ],
               ),
             )
