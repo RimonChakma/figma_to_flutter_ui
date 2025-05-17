@@ -151,7 +151,63 @@ class ThreeContainersScreen extends StatelessWidget {
                             shape: BoxShape.circle
                         ),
                       ),
-                    ],)
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.brown,
+                            shape: BoxShape.circle
+                        ),
+                      ),
+                    ],),
+                  SizedBox(height: 10,),
+                  Text("Size"),
+                  SizedBox(height: 10,),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          border: Border.all(color: Colors.black,width: 1)
+                        ),
+                        child: Center(child: Text("x"),),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            shape: BoxShape.circle
+                        ),
+                        child: Center(child: Text("XL",style: TextStyle(color: Colors.white),),),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black,width: 1),
+                            shape: BoxShape.circle
+                        ),
+                        child: Center(child: Text("2L"),),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black,width: 1),
+                            shape: BoxShape.circle
+                        ),
+                        child: Center(child: Text("x"),),
+                      ),
+                    ],),
+
                 ],
               ),
             )
