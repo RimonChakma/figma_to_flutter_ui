@@ -207,6 +207,10 @@ class ThreeContainersScreen extends StatelessWidget {
                         child: Center(child: Text("x"),),
                       ),
                     ],),
+                  SizedBox(height: 10,),
+                  Text("Description"),
+                  SizedBox(height: 10,),
+                  Text("Reference site about Lorem ipsum giving information on its origin as well as a random Lipsum genarator reference site about larem ipsum")
 
                 ],
               ),
@@ -224,6 +228,7 @@ class ThreeContainersScreen extends StatelessWidget {
             BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "cart"),
             BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),label: "wish",),
           ]),
+
     );
   }
 }
