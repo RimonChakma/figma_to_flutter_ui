@@ -27,7 +27,7 @@ class ThreeContainersScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 180,
+              height: 165,
               width: double.infinity,
               color: Colors.grey,
               child: Column(
@@ -39,8 +39,8 @@ class ThreeContainersScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                     Container(
-                      height: 15,
-                      width: 15,
+                      height: 10,
+                      width: 10,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle
@@ -48,8 +48,8 @@ class ThreeContainersScreen extends StatelessWidget {
                     ),
                       SizedBox(width: 5,),
                       Container(
-                        height: 15,
-                        width: 15,
+                        height: 10,
+                        width: 10,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle
@@ -57,8 +57,8 @@ class ThreeContainersScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 5,),
                       Container(
-                        height: 15,
-                        width: 15,
+                        height: 10,
+                        width: 10,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle
@@ -66,8 +66,8 @@ class ThreeContainersScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 5,),
                       Container(
-                        height: 15,
-                        width: 15,
+                        height: 10,
+                        width: 10,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle
@@ -210,8 +210,27 @@ class ThreeContainersScreen extends StatelessWidget {
                   SizedBox(height: 10,),
                   Text("Description"),
                   SizedBox(height: 10,),
-                  Text("Reference site about Lorem ipsum giving information on its origin as well as a random Lipsum genarator reference site about larem ipsum")
+                  Text("Reference site about Lorem ipsum giving information on its origin as well as a random Lipsum genarator reference site about larem ipsum"),
+                  SizedBox(height: 5,),
 
+                  Card(
+                    color: Colors.grey,
+                    elevation: 1,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10))),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 12),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Column(
+                          children: [
+                          Text("Price"),
+                          Text("1000\$",style: TextStyle(color: Colors.white.withOpacity(0.7)),)
+                        ],),
+
+                      ],),
+                    ),
+                  )
                 ],
               ),
             )
