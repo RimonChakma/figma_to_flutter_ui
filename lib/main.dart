@@ -227,7 +227,15 @@ class ThreeContainersScreen extends StatelessWidget {
                           Text("Price"),
                           Text("1000\$",style: TextStyle(color: Colors.white.withOpacity(0.7)),)
                         ],),
-
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          child: Text("Buy Now"),
+                        )
                       ],),
                     ),
                   )
