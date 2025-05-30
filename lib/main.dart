@@ -66,6 +66,26 @@ class CreateReviewForm extends StatelessWidget {
             ),),
           ),
         ),
+        SizedBox(height: 10,),
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Container(
+            height: 150,
+            decoration: BoxDecoration(
+                border: Border.all(
+                    color: Colors.grey.shade500,
+                    width: 1
+                )
+            ),
+            child: TextField(decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+              ),
+              hintText: "Write Review",
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            ),),
+          ),
+        ),
       ],),
 
       bottomNavigationBar: BottomNavigationBar(
